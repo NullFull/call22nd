@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
+@import url(https://fonts.googleapis.com/css2?family=Abel);
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 3rem 4rem 3rem;
+  background: linear-gradient(#1C63E9, 20%, #E690DD);
+  min-height: 1000px;
+  text-align: center;
+}
+.logo {
+  width: 100vw;
+  height: 35vw;
+  position: relative;
+  font-family: 'Abel', 'Noto Sans KR', 'Pretendard';
+}
+.title {
+  width: 100vw;
+  height: 65vw;
+  margin-top: 30px;
+  position: relative;
+}
+.worker {
+  font-size: x-large;
+  word-break: keep-all;
+}
+.footer {
+  color: white;
+}
+
+.purple {
+  background-color: #E38FDD;
+}
+.purpleButton {
+  background-color: #E38FDD;
+  width: 67vw;
+  height: 18vw;
+  border: none;
+  border-radius: 9vw;
+}
+.whiteButton {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 4px solid white;
+  border-radius: 11vw;
+  width: 80vw;
+  height: 22vw;
+  font-size: large;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 35vw;
+  bottom: 0;
+}
+.whiteButtonTitle {
+  font-size: xx-large;
+  font-weight: bold;
+  position: absolute;
+}
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.circle {
+  width: 18vw;
+  height: 18vw;
+  line-height: 18vw;
+  border-radius: 50%;
+  display: block;
+  color: white;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.year {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 28vw;
+  display: block;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.message {
+  color: white;
+  font-family: 'Noto Sans KR', 'Pretendard';
+  vertical-align: middle;
+}
+.textarea {
+  font-size: x-large;
+  font-weight: 550;
+  word-break: keep-all;
+  text-align: center;
+  position: relative;
+}
+.worker {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.subtitle {
+  margin-bottom: 50px;
+}
