@@ -12,14 +12,14 @@
   text-align: center;
 }
 .logo {
-  width: 100vw;
-  height: 35vw;
+  width: 360px;
+  height: 125px;
   position: relative;
   font-family: 'Abel', 'Noto Sans KR', 'Pretendard';
 }
 .title {
-  width: 100vw;
-  height: 65vw;
+  width: 360px;
+  height: 235px;
   margin-top: 30px;
   position: relative;
 }
@@ -39,21 +39,21 @@
 }
 .purpleButton {
   background-color: #E38FDD;
-  width: 67vw;
-  height: 18vw;
+  width: 240px;
+  height: 66px;
   border: none;
-  border-radius: 9vw;
+  border-radius: 33px;
 }
 .whiteButton {
   background-color: rgba(255, 255, 255, 0.15);
   border: 4px solid white;
-  border-radius: 11vw;
-  width: 80vw;
-  height: 22vw;
+  border-radius: 40px;
+  width: 288px;
+  height: 80px;
   margin: auto;
   left: 0;
   right: 0;
-  top: 35vw;
+  top: 126px;
   bottom: 0;
 }
 .whiteButtonTitle {
@@ -72,9 +72,9 @@
   margin-bottom: 10px;
 }
 .circle {
-  width: 18vw;
-  height: 18vw;
-  line-height: 18vw;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
   border-radius: 50%;
   display: block;
   color: white;
@@ -88,7 +88,7 @@
 }
 .year {
   color: rgba(255, 255, 255, 0.2);
-  font-size: 28vw;
+  font-size: 100px;
   display: block;
   text-align: center;
   position: absolute;

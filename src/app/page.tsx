@@ -19,6 +19,8 @@ export default function Home() {
           link={"https://www.google.com/"}
           message={"콜22 캠페인 브로슈어 다운로드"}
         />
+      </div>
+      <div className="header">
         <PurpleButton
           link={"https://www.google.com/"}
           message={"서명운동 참여하기"}
@@ -37,7 +39,7 @@ export default function Home() {
           height={0}
           style={
             {
-              width: "40vw",
+              width: "144px",
               height: "auto",
               verticalAlign: "middle",
               position: "absolute",
@@ -63,7 +65,7 @@ export default function Home() {
           height={0}
           style={
             {
-              width: "40vw",
+              width: "144px",
               height: "auto",
               marginTop: "15px",
               marginBottom: "15px"
@@ -80,6 +82,8 @@ export default function Home() {
             link={"https://www.google.com/"}
             message={"2022-2023 강간 무죄 판결 보기"}
           />
+        </div>
+        <div className="buttons">
           <WhiteButton
             link={"https://www.google.com/"}
             message={"폐기 법안 / 성범죄 기사 보러 가기"}
@@ -92,7 +96,7 @@ export default function Home() {
           height={0}
           style={
             {
-              width: "40vw",
+              width: "144px",
               height: "auto",
               marginTop: "15px",
               marginBottom: "15px"
