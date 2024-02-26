@@ -1,0 +1,41 @@
+name: Lint
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+     # Supabase Setup
+     # - name: Make envfile
+     #   uses: SpicyPizza/create-envfile@v1
+     #   with:
+     #     envkey_NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+     #     envkey_NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+     #     file_name: .env
+
+      - name: Install and Build
+        uses: actions/setup-node@v2
+      - run: yarn
+      - run: yarn lint
+
+     # Build, Export, Deploy
+     # - run: yarn build
+     # - run: yarn export
+     #   env:
+     #     CI: true
+     #     DEPLOY_TARGET: gh-pages
+     # - run: touch out/.nojekyll
+
+     # - name: Deploy
+     #   uses: JamesIves/github-pages-deploy-action@4.1.5
+     #   with:
+     #     branch: gh-pages
+     #     folder: out
+     #     clean: true
