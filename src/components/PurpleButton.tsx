@@ -13,7 +13,7 @@ const PurpleButton = (props: {link: string, message: string}) => {
           height={0}
           style={
             {
-              width: "4vw",
+              width: "15px",
               height: "auto",
               verticalAlign: "middle",
               marginRight: "5px"

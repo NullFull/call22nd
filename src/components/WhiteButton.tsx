@@ -13,7 +13,7 @@ const WhiteButton = (props: {link: string, message: string}) => {
           height={0}
           style={
             {
-              width: "6vw",
+              width: "22px",
               height: "auto",
               verticalAlign: "middle",
               marginRight: "5px"

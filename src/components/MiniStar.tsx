@@ -11,7 +11,7 @@ const MiniStar = () => {
         height={0}
         style={
           {
-            width: "4vw",
+            width: "15px",
             height: "auto",
             verticalAlign: "middle",
             margin: "20px auto",
