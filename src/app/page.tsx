@@ -39,7 +39,7 @@ export default function Home() {
           height={0}
           style={
             {
-              width: "144px",
+              width: "80px",
               height: "auto",
               verticalAlign: "middle",
               position: "absolute",
@@ -49,6 +49,38 @@ export default function Home() {
             }
           }
           priority
+        />
+        <Image
+          src="/star.svg"
+          alt="star"
+          width={0}
+          height={0}
+          style={
+            {
+              width: "15px",
+              height: "auto",
+              display: "block",
+              position: "absolute",
+              top: "160px",
+              left: "50px"
+            }
+          }
+        />
+        <Image
+          src="/star.svg"
+          alt="star"
+          width={0}
+          height={0}
+          style={
+            {
+              width: "30px",
+              height: "auto",
+              display: "block",
+              position: "absolute",
+              top: "50px",
+              right: "66px"
+            }
+          }
         />
       </div>
 
