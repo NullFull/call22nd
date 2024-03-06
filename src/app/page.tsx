@@ -22,7 +22,7 @@ export default function Home() {
       </div>
       <div className="header">
         <PurpleButton
-          link={"https://www.google.com/"}
+          link={"https://wonderful-law.korea.wtf/result?opened=true"}
           message={"서명운동 참여하기"}
         />
       </div>
