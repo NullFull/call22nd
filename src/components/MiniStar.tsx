@@ -5,7 +5,7 @@ const MiniStar = () => {
   return (
     <div className="miniStar">
       <Image
-        src="/star.svg"
+        src="/images/star.svg"
         alt="star"
         width={0}
         height={0}

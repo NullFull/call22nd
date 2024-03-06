@@ -7,7 +7,7 @@ const WhiteButton = (props: {link: string, message: string}) => {
     <button className="whiteButton shadow">
       <Link href={props.link}>
         <Image
-          src="/page.svg"
+          src="/images/page.svg"
           alt="page"
           width={0}
           height={0}

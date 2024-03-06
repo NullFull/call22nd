@@ -33,7 +33,7 @@ export default function Home() {
           message={"콜22 총선 캠페인"}
         />
         <Image
-          src="/bell.svg"
+          src="/images/bell.svg"
           alt="bell"
           width={0}
           height={0}
@@ -51,7 +51,7 @@ export default function Home() {
           priority
         />
         <Image
-          src="/star.svg"
+          src="/images/star.svg"
           alt="star"
           width={0}
           height={0}
@@ -67,7 +67,7 @@ export default function Home() {
           }
         />
         <Image
-          src="/star.svg"
+          src="/images/star.svg"
           alt="star"
           width={0}
           height={0}
@@ -91,7 +91,7 @@ export default function Home() {
         <MiniStar />
         <p>저희는 강간죄의 구성요건을<br />피해자의 &apos;동의&apos; 여부로<br />개정할 의사가 있는지<br />궁금해하는 시민들의 질문을<br /><span className="blue">167,398번</span> 발송했고</p>
         <Image
-          src="/law.svg"
+          src="/images/law.svg"
           alt="law"
           width={0}
           height={0}
@@ -122,7 +122,7 @@ export default function Home() {
           />
         </div>
         <Image
-          src="/qna.svg"
+          src="/images/qna.svg"
           alt="qna"
           width={0}
           height={0}

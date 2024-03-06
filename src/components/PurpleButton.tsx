@@ -7,7 +7,7 @@ const PurpleButton = (props: {link: string, message: string}) => {
     <button className="purpleButton shadow">
       <Link href={props.link}>
         <Image
-          src="/star.svg"
+          src="/images/star.svg"
           alt="star"
           width={0}
           height={0}
