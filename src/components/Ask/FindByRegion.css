@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+}
+.wrapper > div {
+    flex: 1 1 0;
+    border: 1px solid #5A4D46;
+    border-radius: 4px;
+}
+.wrapper > div:first-child {
+    margin-right: 16px;
+}

@@ -1,0 +1,35 @@
+.ask {
+  font-size: medium;
+}
+.notice li {
+  padding: 4px 8px;
+}
+.notice li:last-child {
+  margin-bottom: 4px;
+}
+.notice h4 {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+}
+.notice h4:after {
+  content: ' ';
+  display: inline-block;
+  height: 2px;
+  background: #ffc700;
+}
+.notice h4:last-child {
+  margin-bottom: 4px;
+}
+.askButton {
+  font-size: 1.1rem;
+  padding: 12px 16px 12px 16px;
+  color: #fff;
+  background: #463e39;
+}
+.askButton:disabled {
+  opacity: 0.5;
+}
+.input {
+  padding: 8px 0 8px 0;
+}

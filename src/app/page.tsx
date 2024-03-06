@@ -4,7 +4,7 @@ import PurpleButton from "@/components/PurpleButton";
 import WhiteButton from "@/components/WhiteButton";
 import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
-import SearchAndSend from "@/components/SearchAndSend";
+import Ask from '@/components/Ask'
 
 export default function Home() {
   return (
@@ -142,7 +142,7 @@ export default function Home() {
 
       <div className="worker">
         <p className="message subtitle">국회의원 후보에게 질문하기</p>
-        <SearchAndSend />
+        <Ask />
       </div>
 
       <div className="footer">
