@@ -1,0 +1,64 @@
+.candidates {
+  min-height: 200px;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.candidates .message {
+  text-align: center;
+}
+.candidates table {
+  padding-top: 24px;
+}
+.candidates table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  cursor: pointer;
+}
+.candidates table td {
+  position: relative;
+  padding: 0 4px 0 4px;
+  white-space: nowrap;
+  line-height: 32px;
+}
+.candidates table td.checkbox,
+.candidates table td.status {
+  text-align: center;
+}
+.candidates table td.agreed {
+  min-width: 40px;
+  text-align: center;
+}
+.candidates table .all {
+  position: absolute;
+  top: -32px;
+  left: 0;
+}
+.candidates table thead td.count,
+.candidates table thead td.sns {
+  text-align: center;
+}
+.candidates table tbody tr td.name {
+  font-weight: bold;
+}
+.candidates table tbody tr td.agreed {
+  font-weight: bold;
+}
+.candidates table tbody tr td.count {
+  text-align: right;
+}
+.candidates table tbody tr td.count,
+.candidates table tbody tr td.contact,
+.candidates table tbody tr td.status {
+  padding: 0 24px 0 24px;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+.candidates table tbody tr td.sns {
+  display: flex;
+}
+.candidates table tbody tr td.sns a {
+  display: flex;
+  padding: 2px;
+  opacity: 0.9;
+}

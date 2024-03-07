@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+.wrapper input,
+.wrapper button {
+  font-size: 1.1rem;
+  padding: 6px 10px 6px 10px;
+}
+.wrapper input {
+  flex-grow: 1;
+  margin-right: 8px;
+  padding: 8px;
+}
+.wrapper button {
+  color: #fff;
+  background: #5a4d46;
+  cursor: pointer;
+}
+.wrapper button:disabled {
+  cursor: initial;
+}
