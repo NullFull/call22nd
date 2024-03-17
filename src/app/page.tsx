@@ -4,7 +4,8 @@ import PurpleButton from "@/components/PurpleButton";
 import WhiteButton from "@/components/WhiteButton";
 import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
-import Ask from '@/components/Ask'
+import Ask from '@/components/Ask';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Home() {
   return (
@@ -147,6 +148,12 @@ export default function Home() {
       <div className="footer">
         <p>Contact Us</p>
         <p>call22ndworks@gmail.com</p>
+      </div>
+
+      <div className="scroll">
+        <ScrollToTop
+          link={"#main"}
+        />
       </div>
     </main>
   );
