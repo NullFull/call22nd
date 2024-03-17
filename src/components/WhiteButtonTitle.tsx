@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WhiteButton = (props: {message: string}) => {
+const WhiteButtonTitle = (props: {message: string}) => {
   return (
     <button className="whiteButton whiteButtonTitle shadow">
       <span className="message">{props.message}</span>
@@ -8,4 +8,4 @@ const WhiteButton = (props: {message: string}) => {
   )
 }
 
-export default WhiteButton;
+export default WhiteButtonTitle;
