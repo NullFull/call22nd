@@ -16,20 +16,19 @@ export default function Home() {
 
       <div className="header">
         <PurpleButton
-          link={"https://www.google.com/"}
+          link={"https://drive.google.com/file/d/10_qClL-HXUuJOZtV-m1LvvlWxf6eehw6/view?usp=sharing"}
           message={"콜22 캠페인 브로슈어 다운로드"}
         />
       </div>
       <div className="header">
         <PurpleButton
-          link={"https://wonderful-law.korea.wtf/result?opened=true"}
+          link={"#askSection"}
           message={"서명운동 참여하기"}
         />
       </div>
 
       <div className="title">
         <WhiteButtonTitle
-          link={"https://www.google.com/"}
           message={"콜22 총선 캠페인"}
         />
         <Image
@@ -111,13 +110,13 @@ export default function Home() {
         <p>이상한 나라의 대한민국은<br />판사를 잘 만나야<br />자신의 강간 피해를<br />사법적으로 해결할 수 있는<br />나라이기에<br />수많은 피해 사건들이<br />지금 이 순간에도<br />법망을 빠져나가고 있습니다.</p>
         <div className="buttons">
           <WhiteButton
-            link={"https://www.google.com/"}
+            link={"https://super-mayonnaise-862.notion.site/7b0077e5966c4be79b1745bc5b3366ba"}
             message={"2022-2023 강간 무죄 판결 보기"}
           />
         </div>
         <div className="buttons">
           <WhiteButton
-            link={"https://www.google.com/"}
+            link={"https://super-mayonnaise-862.notion.site/21-feaa4e5208e0412dafa84bad1c45816e"}
             message={"폐기 법안 / 성범죄 기사 보러 가기"}
           />
         </div>
@@ -140,14 +139,14 @@ export default function Home() {
         <p>콜22 팀이 여러분의 질문을<br />대신 전해드립니다.</p>
       </div>
 
-      <div className="worker">
+      <div className="worker" id="askSection">
         <p className="message subtitle">국회의원 후보에게 질문하기</p>
         <Ask />
       </div>
 
       <div className="footer">
         <p>Contact Us</p>
-        <p>contact@call21.works</p>
+        <p>call22ndworks@gmail.com</p>
       </div>
     </main>
   );
