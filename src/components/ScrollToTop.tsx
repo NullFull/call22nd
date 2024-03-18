@@ -31,6 +31,12 @@ function useWindowWidth() {
 
 const ScrollToTop = (props: { link: string }) => {
   const width = useWindowWidth();
+  const [right, setRight] = useState(25);
+
+  useEffect(() => {
+    setRight((Number(width.width) - 360) / 2 + 25)
+    console.log(right)
+  }, [width, right])
 
   return (
     <Link href={props.link}>
@@ -41,12 +47,12 @@ const ScrollToTop = (props: { link: string }) => {
         height={52}
         style={
           {
-            height: "auto",
             position: "fixed",
-            bottom: "150px",
             border: "1px solid #ffffff",
             borderRadius: "26px",
-            right: `${(Number(width) - 360) / 2 + 25}px`
+            left: "auto",
+            right: `${right}px`,
+            bottom: "150px",
           }
         }
       />
