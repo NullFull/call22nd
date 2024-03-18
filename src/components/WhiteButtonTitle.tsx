@@ -1,14 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
 
-const WhiteButton = (props: {link: string, message: string}) => {
+const WhiteButtonTitle = (props: {message: string}) => {
   return (
     <button className="whiteButton whiteButtonTitle shadow">
-      <Link href={props.link}>
-        <span className="message">{props.message}</span>
-      </Link>
+      <span className="message">{props.message}</span>
     </button>
   )
 }
 
-export default WhiteButton;
+export default WhiteButtonTitle;
