@@ -48,8 +48,8 @@ const ScrollToTop = (props: { link: string }) => {
         style={
           {
             position: "fixed",
-            border: "1px solid #ffffff",
-            borderRadius: "26px",
+            boxShadow: "rgba(0, 0, 0, 0.25) 0px 0px 20px 5px",
+            borderRadius: "50%",
             left: "auto",
             right: `${right}px`,
             bottom: "150px",
