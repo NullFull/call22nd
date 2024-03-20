@@ -43,17 +43,14 @@ export default function Home() {
             message={"콜22 총선 캠페인"}
           />
           <Image
-            src="/images/bell.svg"
+            src="/images/bell.png"
             alt="bell"
-            width={0}
-            height={0}
+            width={80}
+            height={87.5}
             style={
               {
-                width: "80px",
-                height: "auto",
-                verticalAlign: "middle",
                 position: "absolute",
-                margin: "auto",
+                margin: "0 auto",
                 left: "0",
                 right: "0"
               }
@@ -101,14 +98,12 @@ export default function Home() {
           <MiniStar />
           <p>저희는 강간죄의 구성요건을<br />피해자의 &apos;동의&apos; 여부로<br />개정할 의사가 있는지<br />궁금해하는 시민들의 질문을<br /><span className="blue">167,398번</span> 발송했고</p>
           <Image
-            src="/images/law.svg"
+            src="/images/law.png"
             alt="law"
-            width={0}
-            height={0}
+            width={144}
+            height={108}
             style={
               {
-                width: "144px",
-                height: "auto",
                 marginTop: "15px",
                 marginBottom: "15px"
               }
@@ -132,14 +127,12 @@ export default function Home() {
             />
           </div>
           <Image
-            src="/images/qna.svg"
+            src="/images/qna.png"
             alt="qna"
-            width={0}
-            height={0}
+            width={144}
+            height={108}
             style={
               {
-                width: "144px",
-                height: "auto",
                 marginTop: "15px",
                 marginBottom: "15px"
               }
