@@ -4,7 +4,7 @@ import React from 'react';
 import client from '@/utils/client'
 import './result.css'
 
-const Response = ({member, choice}) => (
+const Response = ({member}: any) => (
     <div className="member">
         <h3 className="name">{member.name}</h3>
         <p className="party">{member.party}</p>
@@ -13,8 +13,8 @@ const Response = ({member, choice}) => (
 )
 
 const Result = (props: {link: string, message: string}) => {
-    const [agrees, setAgrees] = React.useState([])
-    const [disagrees, setDisagrees] = React.useState([])
+    const [agrees, setAgrees] = React.useState<any[]>([])
+    const [disagrees, setDisagrees] = React.useState<any[]>([])
 
     React.useEffect(() => {
         const fetchResponses = async () => {
