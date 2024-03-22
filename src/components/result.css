@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 12px;
+  list-style-type: none;
 }
 .member {
   position: relative;
