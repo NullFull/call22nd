@@ -3,11 +3,10 @@ import Image from "next/image";
 
 import "@/app/main.css"
 import PurpleButton from "@/components/PurpleButton";
-import WhiteButton from "@/components/WhiteButton";
 import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
 import Ask from "@/components/Ask";
-import Result from '@/components/Result';
+import Result from "@/components/Result";
 
 const Scroll = dynamic(
   () => {
