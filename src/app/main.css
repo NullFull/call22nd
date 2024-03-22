@@ -158,8 +158,10 @@
 }
 
 .worker {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  background: #f7f7f7;
+  margin: 24px;
+  border-radius: 8px;
+  padding: 16px 10px 48px 10px;
 }
 
 .contactText {
