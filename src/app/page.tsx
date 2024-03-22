@@ -7,7 +7,7 @@ import WhiteButton from "@/components/WhiteButton";
 import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
 import Ask from '@/components/Ask';
-// import ScrollToTop from '@/components/ScrollToTop';
+import Result from '@/components/Result';
 
 const Scroll = dynamic(
   () => {
@@ -142,6 +142,10 @@ export default function Home() {
           <MiniStar />
           <p>콜22 팀이 여러분의 질문을<br />대신 전해드립니다.</p>
         </div>
+
+        {/* <div className="result">
+          <Result />
+        </div> */}
 
         <div className="worker" id="askSection">
           <p className="message subtitle">국회의원 후보에게 질문하기</p>

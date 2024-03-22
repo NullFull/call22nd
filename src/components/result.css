@@ -1,0 +1,84 @@
+.title {
+  text-align: center;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+.member {
+  position: relative;
+  text-align: center;
+  width: 100px;
+  height: auto;
+  margin-right: 4px;
+}
+.member h3 {
+  background: #ffc700;
+}
+.member p {
+  margin: auto 0;
+}
+.member .region {
+  opacity: 0.6;
+  padding-bottom: 4px;
+  font-size: 0.75rem;
+}
+/*
+  h3
+    position relative
+    width 100px
+    height 50px
+    margin 0 auto
+    padding 8px
+    border-top 2px solid #5A4D46
+    border-right 2px solid #5A4D46
+    border-left 2px solid #5A4D46
+    border-radius 50px 50px 0 0
+    background #FFC700
+
+  p
+    position absolute
+    margin 0
+    width 156px
+    height 24px
+    border-right 2px solid #5A4D46
+    border-left 2px solid #5A4D46
+    border-radius 4px
+    line-height 1.9em
+    background white
+  .name
+    font-size 1.0rem
+  .party
+    top 36px
+    font-size 0.8rem
+    border-top 2px solid #5A4D46
+    border-bottom 1px dashed #5A4D46
+  .region
+    top 63px
+    border-bottom 2px solid #5A4D46
+    font-size 0.75rem
+*/
+.responses ul {
+  display: flex;
+  justify-content: center;
+}
+.responses ul li {
+  padding: 1px;
+}
+.responses ul li span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+.responses .true {
+  background: #066a3e;
+}
+.responses .false {
+  background: #c91226;
+}
+.responses .null {
+  background: #f4cc1a;
+}
