@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import Image from "next/image";
 
 import "@/app/main.css"
@@ -6,8 +6,8 @@ import PurpleButton from "@/components/PurpleButton";
 import WhiteButton from "@/components/WhiteButton";
 import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
-import Ask from '@/components/Ask';
-// import ScrollToTop from '@/components/ScrollToTop';
+import Ask from "@/components/Ask";
+// import ScrollToTop from "@/components/ScrollToTop";
 
 const Scroll = dynamic(
   () => {
@@ -21,8 +21,10 @@ export default function Home() {
     <div className="mainWrapper">
       <main className="main">
         <div className="logo">
+          <div className="circle purple shadow">
+            <span className="circleTitle">Call 22</span>
+          </div>
           <span className="year">2024</span>
-          <span className="circle purple shadow">Call 22</span>
         </div>
 
         <div className="header">
@@ -105,7 +107,7 @@ export default function Home() {
           </p>
 
           <MiniStar />
-          <div className='speech'>
+          <div className="speech">
             <p>
               윤석열:<br />
               “구조적인 성차별은 없다.<br />
@@ -139,9 +141,8 @@ export default function Home() {
           <MiniStar />
           <p>
             현재까지 000개의 질문과 함께<br />
-            하고 있습니다.
-          </p>
-          <p>
+            하고 있습니다.<br />
+            <br />
             클릭 한 번으로 &apos;성평등&apos;을 위한
             발걸음에 함께 해주세요!
           </p>
