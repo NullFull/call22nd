@@ -27,18 +27,14 @@ export default function Home() {
           <span className="year">2024</span>
         </div>
 
-        <div className="header">
-          <PurpleButton
-            link={"https://drive.google.com/file/d/10_qClL-HXUuJOZtV-m1LvvlWxf6eehw6/view?usp=sharing"}
-            message={"콜22 캠페인 브로슈어 다운로드"}
-          />
-        </div>
-        <div className="header">
-          <PurpleButton
-            link={"#askSection"}
-            message={"서명운동 참여하기"}
-          />
-        </div>
+        <PurpleButton
+          link={"https://drive.google.com/file/d/10_qClL-HXUuJOZtV-m1LvvlWxf6eehw6/view?usp=sharing"}
+          message={"콜22 캠페인 브로슈어 다운로드"}
+        />
+        <PurpleButton
+          link={"#askSection"}
+          message={"서명운동 참여하기"}
+        />
 
         <div className="title">
           <WhiteButtonTitle

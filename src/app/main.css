@@ -53,11 +53,12 @@
 }
 
 .purpleButton {
+  margin-top: 16px;
   background-color: #E38FDD;
-  width: 240px;
-  height: 66px;
+  width: 320px;
+  height: 64px;
   border: none;
-  border-radius: 33px;
+  border-radius: 32px;
 }
 
 .whiteButton {

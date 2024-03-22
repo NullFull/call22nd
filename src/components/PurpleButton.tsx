@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const PurpleButton = (props: {link: string, message: string}) => {
+const PurpleButton = (props: { link: string, message: string }) => {
   return (
     <button className="purpleButton shadow">
       <Link href={props.link}>
