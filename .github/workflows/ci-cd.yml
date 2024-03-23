@@ -20,16 +20,21 @@ jobs:
      #     envkey_NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
      #     file_name: .env
      #
-      - name: Create .env file
-        uses: SpicyPizza/create-envfile@v2.0
-        with:
-          PROJECT_ID: ${{ secrets.PROJECT_ID}}
-          PRIVATE_KEY_ID: ${{ secrets.PRIVATE_KEY_ID }}
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+     - name: Generate Environment Variables
+        run: |
+          echo "CLIENT_EMAIL=$CLIENT_EMAIL" >> .env
+          echo "CLIENT_ID=$CLIENT_ID" >> .env
+          echo "CLIENT_X509_CERT_URL=$CLIENT_X509_CERT_URL" >> .env
+          echo "PRIVATE_KEY=$PRIVATE_KEY" >> .env
+          echo "PRIVATE_KEY_ID=$PRIVATE_KEY_ID" >> .env
+          echo "PROJECT_ID=$PROJECT_ID" >> .env
+        env:
           CLIENT_EMAIL: ${{ secrets.CLIENT_EMAIL }}
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
           CLIENT_X509_CERT_URL: ${{ secrets.CLIENT_X509_CERT_URL }}
-          file_name: .env
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY_ID: ${{ secrets.PRIVATE_KEY_ID }}
+          PROJECT_ID: ${{ secrets.PROJECT_ID }}
 
       - name: Install and Build
         uses: actions/setup-node@v2
