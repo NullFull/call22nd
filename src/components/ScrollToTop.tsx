@@ -35,7 +35,6 @@ const ScrollToTop = (props: { link: string }) => {
 
   useEffect(() => {
     setRight((Number(width.width) - 360) / 2 + 25)
-    console.log(right)
   }, [width, right])
 
   return (

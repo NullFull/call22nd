@@ -3,11 +3,10 @@ import Image from "next/image";
 
 import "@/app/main.css"
 import PurpleButton from "@/components/PurpleButton";
-import WhiteButton from "@/components/WhiteButton";
 import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
 import Ask from "@/components/Ask";
-// import ScrollToTop from "@/components/ScrollToTop";
+import Result from "@/components/Result";
 
 const Scroll = dynamic(
   () => {
@@ -143,6 +142,10 @@ export default function Home() {
             발걸음에 함께 해주세요!
           </p>
         </div >
+
+        {/* <div className="result">
+          <Result />
+        </div> */}
 
         <div className="worker" id="askSection">
           <Ask />

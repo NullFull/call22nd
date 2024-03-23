@@ -35,6 +35,12 @@
   position: relative;
 }
 
+.listTitle {
+  width: 360px;
+  margin-top: 30px;
+  position: relative;
+}
+
 .worker {
   font-size: x-large;
   word-break: keep-all;
