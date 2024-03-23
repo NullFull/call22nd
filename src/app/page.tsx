@@ -143,9 +143,9 @@ export default function Home() {
           </p>
         </div >
 
-        {/* <div className="result">
+        <div className="result">
           <Result />
-        </div> */}
+        </div>
 
         <div className="worker" id="askSection">
           <Ask />
