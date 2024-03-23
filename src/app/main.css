@@ -35,6 +35,12 @@
   position: relative;
 }
 
+.listTitle {
+  width: 360px;
+  margin-top: 30px;
+  position: relative;
+}
+
 .worker {
   font-size: x-large;
   word-break: keep-all;
@@ -138,9 +144,6 @@
   position: relative;
 }
 
-.result {
-  padding-top: 100px;
-}
 .speech {
   width: 320px;
   background-color: #ffffff 15%;
