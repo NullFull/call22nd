@@ -12,7 +12,7 @@ const Response = ({member}: any) => (
     </div>
 )
 
-const Result = (props: {link: string, message: string}) => {
+const Result = () => {
     const [agrees, setAgrees] = React.useState<any[]>([])
     const [disagrees, setDisagrees] = React.useState<any[]>([])
 
