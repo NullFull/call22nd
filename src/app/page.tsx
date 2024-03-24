@@ -33,7 +33,7 @@ export default function Home() {
         />
         <PurpleButton
           link={"#askSection"}
-          message={"서명운동 참여하기"}
+          message={"강간죄 개정 촉구하러 가기"}
         />
 
         <div className="title">
@@ -97,9 +97,9 @@ export default function Home() {
           <MiniStar />
           <p>
             강간죄의 구성요건을<br />
-            &apos;동의여부&apos;로 바꾸고,<br />
-            성평등 전담부처<br />
-            강화하는데 동의하십니까?
+            &apos;동의 여부&apos;로 바꾸고,<br />
+            성평등 전담부처를<br />
+            강화하는 데 동의하십니까?
           </p>
 
           <MiniStar />
