@@ -20,7 +20,7 @@ const PurpleButton = (props: { link: string, message: string }) => {
             }
           }
         />
-        <span className="message">{props.message}</span>
+        <span className="medium message">{props.message}</span>
       </Link>
     </button>
   )

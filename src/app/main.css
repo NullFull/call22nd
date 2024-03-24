@@ -136,6 +136,10 @@
   vertical-align: middle;
 }
 
+.medium {
+  font-size: medium;
+}
+
 .textarea {
   font-size: x-large;
   font-weight: 550;
