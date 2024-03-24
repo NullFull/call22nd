@@ -28,10 +28,12 @@ const Answer = () => {
 
         try {
             setLoading(true)
-            await client().post(`/api/responses`, {
+            const test = await client().post(`/api/responses`, {
                 token: query.token,
                 choice
             })
+            if (test.message)
+                throw new Error('유효하지 않은 토큰입니다.')
             alert('답변이 저장되었습니다.\n답변이 홈페이지에 반영되기까지 다소 시간이 걸릴 수 있습니다.')
         } catch (e) {
             alert('오류가 발생했습니다. 다시 시도해주세요.')
