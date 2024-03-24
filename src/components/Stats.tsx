@@ -4,7 +4,7 @@ import React from "react";
 import client from "@/utils/client"
 
 const useStats = () => {
-    const [stats, setStats] = React.useState(null)
+    const [stats, setStats] = React.useState<any>(null)
 
     React.useEffect(() => {
         const fetchStats = async () => {
