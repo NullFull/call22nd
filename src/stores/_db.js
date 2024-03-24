@@ -1,6 +1,6 @@
 import admin from 'firebase-admin'
 
-const pkey = JSON.parse(process.env.FIREBASE_PKEY)
+const pkey = process.env.FIREBASE_PKEY
 ? process.env.FIREBASE_PKEY.replace(/\\n/g, "\n")
 : undefined;
 
