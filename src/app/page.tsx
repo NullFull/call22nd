@@ -6,6 +6,7 @@ import PurpleButton from "@/components/PurpleButton";
 import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
 import Ask from "@/components/Ask";
+import Stats from "@/components/Stats";
 import Result from "@/components/Result";
 
 const Scroll = dynamic(
@@ -134,10 +135,8 @@ export default function Home() {
             성평등 퇴보를 막을 수 있습니까?
           </p>
           <MiniStar />
+          <Stats />
           <p>
-            현재까지 000개의 질문과 함께<br />
-            하고 있습니다.<br />
-            <br />
             클릭 한 번으로 &apos;성평등&apos;을 위한
             발걸음에 함께 해주세요!
           </p>
