@@ -109,9 +109,14 @@ const Ask = () => {
     }
 
     const content = '후보님의 생각이 궁금합니다.'
-    await client().sendRequest(content, candidates.filter(c => c.checked).map(c => c.id))
-
-    alert('질문이 등록 되었습니다.\n연락처가 존재하는 후보에게는 질문이 메일로 전달됩니다.')
+    try {
+      await client().sendRequest(content, candidates.filter(c => c.checked).map(c => c.id))
+      alert('질문이 등록 되었습니다.\n연락처가 존재하는 후보에게는 질문이 메일로 전달됩니다.')
+    }
+    catch (e)
+    {
+      alert('오류가 발생했습니다.')
+    }
   }
 
   return (
@@ -191,9 +196,9 @@ const Ask = () => {
         </CandidatesContext.Provider>
       </div>
 
-      {/* <div>
-        <button className="askButton" disabled={true}>지금은 질문을 보낼 수 없습니다.</button>
-      </div> */}
+      <div>
+        <button className="askButton" onClick={() => ask()}>질문 보내기</button>
+      </div>
     </div>
   )
 }
