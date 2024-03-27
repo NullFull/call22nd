@@ -5,16 +5,14 @@ import Link from 'next/link';
 const PurpleButton = (props: { link: string, message: string }) => {
   return (
     <button className="purpleButton shadow">
-      <Link href={props.link}>
+      <Link href={props.link} target="_blank" rel="noreferrer" download>
         <Image
           src="/images/star.svg"
           alt="star"
-          width={0}
-          height={0}
+          width={16}
+          height={17}
           style={
             {
-              width: "15px",
-              height: "auto",
               verticalAlign: "middle",
               marginRight: "5px"
             }
