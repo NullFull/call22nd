@@ -33,7 +33,7 @@ export default function Home() {
             message={"콜22 총선 캠페인"}
           />
           <Image
-            src="/images/bell.png"
+            src="/images/bell.webp"
             alt="bell"
             width={80}
             height={87.5}
