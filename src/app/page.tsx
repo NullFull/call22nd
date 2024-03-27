@@ -6,16 +6,17 @@ import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
 import Ask from "@/components/Ask";
 import Stats from "@/components/Stats";
+import Logo from "@/components/Logo";
 // import Result from "@/components/Result";
+
+
 
 export default function Home() {
   return (
     <div className="mainWrapper">
       <main className="main">
-        <div className="logo">
-          <div className="circle purple shadow">
-            <span className="circleTitle">Call 22</span>
-          </div>
+        <div className="header">
+          <Logo />
           <span className="year">2024</span>
         </div>
 
@@ -37,14 +38,6 @@ export default function Home() {
             alt="bell"
             width={80}
             height={87.5}
-            style={
-              {
-                position: "absolute",
-                margin: "0 auto",
-                left: "0",
-                right: "0"
-              }
-            }
             priority
           />
           <Image

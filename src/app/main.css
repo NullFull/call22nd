@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.logo {
+.header {
   display: flex;
   flex-direction: row;
   width: 360px;
@@ -28,11 +28,30 @@
   font-family: 'Abel', 'Noto Sans KR', 'Pretendard';
 }
 
+.logoImage {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: #A7ACEF;
+  border-radius: 50%;
+  transform: translate(20px, 32px);
+  box-shadow: 2px 2px 14px 0 rgba(0,0,0,25%);
+
+  img {
+    padding: 4px;
+    transform: rotate(-28deg);
+  }
+}
+
 .title {
   width: 360px;
   height: 190px;
   margin-top: 30px;
   position: relative;
+
+  img {
+    position: relative;
+  }
 }
 
 .listTitle {
@@ -95,28 +114,6 @@
 .buttons {
   margin-top: 20px;
   margin-bottom: 10px;
-}
-
-.circle {
-  display: flex;
-  width: 64px;
-  height: 64px;
-  margin-left: 20px;
-  margin-right: auto;
-  margin-top: 16px;
-  border-radius: 32px;
-  gap: 0px;
-}
-
-.circleTitle {
-  margin: auto;
-  font-family: Abel;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 17px;
-  letter-spacing: -0.01em;
-  color: #FFFFFF;
-  text-align: center;
 }
 
 .year {
@@ -183,4 +180,16 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 21.79px;
+}
+
+#circle {
+  position: relative;
+  border-radius: 100%;
+  padding: 16px;
+  transform: translate(-36px, -36px);
+}
+
+#circle span {
+  position: absolute;
+  color: white;
 }
