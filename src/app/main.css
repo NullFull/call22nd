@@ -140,10 +140,6 @@
   font-size: medium;
 }
 
-.large {
-  font-size: large;
-}
-
 .textarea {
   font-size: x-large;
   font-weight: 550;
@@ -226,7 +222,7 @@
 
   .title {
     width: max-content;
-    height: 340px;
+    height: 300px;
   }
 
   .bellImage {
