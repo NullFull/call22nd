@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
 import "@/app/main.css"
@@ -7,14 +6,7 @@ import WhiteButtonTitle from "@/components/WhiteButtonTitle";
 import MiniStar from "@/components/MiniStar";
 import Ask from "@/components/Ask";
 import Stats from "@/components/Stats";
-import Result from "@/components/Result";
-
-const Scroll = dynamic(
-  () => {
-    return import("@/components/ScrollToTop");
-  },
-  { ssr: false }
-);
+// import Result from "@/components/Result";
 
 export default function Home() {
   return (
@@ -123,11 +115,6 @@ export default function Home() {
           <p className="contactEmail">call22ndworks@gmail.com</p>
         </div>
 
-        <div className="scroll">
-          <Scroll
-            link={"#main"}
-          />
-        </div>
       </main >
     </div >
   );
