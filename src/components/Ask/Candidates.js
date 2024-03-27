@@ -78,10 +78,10 @@ const Candidates = () => {
   if (candidates.length < 1) {
     return status === STATUSES.LOADED ?
       <div className="candidates">
-        <p className="message">검색결과가 없습니다.</p>
+        <p className="message black">검색 결과가 없습니다.</p>
       </div> :
       <div className="candidates">
-        <p className="message">지역구를 선택하거나 이름을 입력해주세요</p>
+        <p className="message black">지역구를 선택하거나 이름을 입력해주세요.</p>
       </div>
   }
 
