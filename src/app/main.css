@@ -167,10 +167,8 @@
 }
 
 .worker {
-  background: #f7f7f7;
-  margin-top: 48px;
-  border-radius: 8px;
-  padding: 16px 10px 16px 10px;
+  width: 100%;
+  margin-top: 64px;
 }
 
 .contactText {
@@ -257,4 +255,9 @@
   .textarea {
     font-size: 28px;
   }
+}
+
+em {
+  background-color: #2B5DE4;
+  font-style: normal;
 }

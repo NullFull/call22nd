@@ -1,10 +1,15 @@
-.black {
-  color: black;
-}
 .candidates {
   min-height: 200px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   overflow: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  table {
+    width: 100%;
+  }
 }
 .candidates .message {
   text-align: center;
