@@ -51,7 +51,7 @@
 .wrapper {
   div {
     border: none;
-    color: #E490DD;
+    color: #BA44AE;
   }
 
   input {
@@ -62,7 +62,7 @@
   }
 
   input::placeholder {
-    color: #E490DD;
+    color: #BA44AE;
   }
 
   button {
