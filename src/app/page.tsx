@@ -16,62 +16,63 @@ export default function Home() {
     <div className="mainWrapper">
       <main className="main">
         <div className="header">
-          <Logo />
-          <span className="year">2024</span>
+          <div className="logoArea">
+            <Logo />
+            <div className="year">2024</div>
+          </div>
+          <div className="purpleButtons">
+            <PurpleButton
+              link={"https://drive.google.com/file/d/10_qClL-HXUuJOZtV-m1LvvlWxf6eehw6/view?usp=sharing"}
+              message={"콜22 캠페인 브로슈어 다운로드"}
+              download
+            />
+            <PurpleButton
+              link={"#askSection"}
+              message={"강간죄 개정 촉구하러 가기"}
+            />
+          </div>
         </div>
-
-        <PurpleButton
-          link={"https://drive.google.com/file/d/10_qClL-HXUuJOZtV-m1LvvlWxf6eehw6/view?usp=sharing"}
-          message={"콜22 캠페인 브로슈어 다운로드"}
-        />
-        <PurpleButton
-          link={"#askSection"}
-          message={"강간죄 개정 촉구하러 가기"}
-        />
 
         <div className="title">
           <WhiteButtonTitle
             message={"콜22 총선 캠페인"}
           />
-          <Image
-            src="/images/bell.webp"
-            alt="bell"
-            width={80}
-            height={87.5}
-            priority
-          />
-          <Image
-            src="/images/star.svg"
-            alt="star"
-            width={0}
-            height={0}
-            style={
-              {
-                width: "15px",
-                height: "auto",
-                display: "block",
-                position: "absolute",
-                top: "160px",
-                left: "50px"
-              }
-            }
-          />
-          <Image
-            src="/images/star.svg"
-            alt="star"
-            width={0}
-            height={0}
-            style={
-              {
-                width: "30px",
-                height: "auto",
-                display: "block",
-                position: "absolute",
-                top: "50px",
-                right: "66px"
-              }
-            }
-          />
+          <div className="bellImage">
+            <Image
+              src="/images/bell.webp"
+              alt="bell"
+              fill
+              priority
+            />
+            <div className="stars">
+              <Image
+                src="/images/star.svg"
+                alt="star"
+                width={15}
+                height={15}
+                style={
+                  {
+                    position: "absolute",
+                    top: "150px",
+                    left: "-90px"
+                  }
+                }
+              />
+              <Image
+                src="/images/star.svg"
+                alt="star"
+                width={30}
+                height={30}
+                style={
+                  {
+                    position: "absolute",
+                    top: "50px",
+                    right: "-60px"
+                  }
+                }
+              />
+            </div>
+          </div>
         </div>
 
         <div className="message textarea">
