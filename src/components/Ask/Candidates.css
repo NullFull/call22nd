@@ -52,9 +52,6 @@
 .candidates table tbody tr td.agreed {
   font-weight: bold;
 }
-.candidates table tbody tr td.count {
-  text-align: right;
-}
 .candidates table tbody tr td.count,
 .candidates table tbody tr td.contact,
 .candidates table tbody tr td.status {
