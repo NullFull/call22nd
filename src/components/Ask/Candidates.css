@@ -1,3 +1,6 @@
+.black {
+  color: black;
+}
 .candidates {
   min-height: 200px;
   margin-bottom: 20px;
