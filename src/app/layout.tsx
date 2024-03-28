@@ -7,7 +7,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const title: string = "제22대 국회에 요구한다"
+const title: string = "콜22 : 제22대 국회에 요구한다"
 const desc: string = "제22대 국회의원 후보자들에게 묻습니다"
 
 export const metadata: Metadata = {

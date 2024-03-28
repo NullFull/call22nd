@@ -162,8 +162,8 @@ const Ask = () => {
       <div>
         <Tabs>
           <TabList>
-            <Tab>지역구 후보 검색</Tab>
-            <Tab>비례대표 후보 검색</Tab>
+            <Tab><p>지역구 후보 검색</p></Tab>
+            <Tab><p>비례대표 후보 검색</p></Tab>
           </TabList>
 
           <TabPanel>

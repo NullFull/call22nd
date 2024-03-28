@@ -1,6 +1,8 @@
 .ask {
   font-size: medium;
-  width: 310px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .notice li {
   padding: 4px 8px;
@@ -33,4 +35,44 @@
 }
 .input {
   padding: 8px 0 8px 0;
+}
+
+.wrapperParty {
+  div {
+    border: none;
+    color: #BA44AE;
+  }
+
+  input {
+    caret-color: transparent;
+    background-color: white;
+  }
+}
+
+.wrapper {
+  div {
+    border: none;
+    color: #BA44AE;
+  }
+
+  input {
+    border-radius: 4px;
+    border: none;
+    padding: 11px 14px;
+    font-size: medium;
+    background-color: white;
+  }
+
+  input::placeholder {
+    color: #BA44AE;
+  }
+
+  button {
+    border-radius: 4px;
+    border: 0;
+  }
+
+  button:disabled {
+    background-color: grey;
+  }
 }
