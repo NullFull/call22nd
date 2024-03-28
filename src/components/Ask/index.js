@@ -9,6 +9,7 @@ import FindByParty from '@/components/Ask/FindByParty'
 import Candidates from '@/components/Ask/Candidates'
 import CandidatesContext from '@/components/Ask/CandidatesContext'
 import client from '@/utils/client'
+import debounce from '@/utils/debounce'
 import './index.css'
 
 
