@@ -1,10 +1,15 @@
-.black {
-  color: black;
-}
 .candidates {
   min-height: 200px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   overflow: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  table {
+    width: 100%;
+  }
 }
 .candidates .message {
   text-align: center;
@@ -46,9 +51,6 @@
 }
 .candidates table tbody tr td.agreed {
   font-weight: bold;
-}
-.candidates table tbody tr td.count {
-  text-align: right;
 }
 .candidates table tbody tr td.count,
 .candidates table tbody tr td.contact,

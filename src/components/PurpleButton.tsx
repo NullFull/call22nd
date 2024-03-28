@@ -2,27 +2,24 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const PurpleButton = (props: { link: string, message: string }) => {
+const PurpleButton = (props: { link: string, message: string, download?: boolean }) => {
+  const downloadProps = props.download ? { download: true, target: '_blank', rel: 'noreferrer' } : {};
   return (
-    <button className="purpleButton shadow">
-      <Link href={props.link}>
-        <Image
-          src="/images/star.svg"
-          alt="star"
-          width={0}
-          height={0}
-          style={
-            {
-              width: "15px",
-              height: "auto",
-              verticalAlign: "middle",
-              marginRight: "5px"
-            }
+    <Link href={props.link} className="purpleButton shadow" {...downloadProps}>
+      <Image
+        src="/images/star.svg"
+        alt="star"
+        width={16}
+        height={17}
+        style={
+          {
+            verticalAlign: "middle",
+            marginRight: "5px"
           }
-        />
-        <span className="medium message">{props.message}</span>
-      </Link>
-    </button>
+        }
+      />
+      <span className="medium message">{props.message}</span>
+    </Link>
   )
 }
 

@@ -1,52 +1,69 @@
-@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(https://fonts.googleapis.com/css2?family=Abel);
 
 .mainWrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  margin: 0 auto;
   background: linear-gradient(#1C63E9, 20%, #E690DD, 80%, #1C63E9);
-  min-height: 900px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 1rem 4rem 1rem;
-  background: linear-gradient(#1C63E9, 20%, #E690DD, 80%, #1C63E9);
-  width: 360px;
+  padding: 1.2rem 1.6rem 6.4rem 1.6rem;
   height: 100%;
   text-align: center;
 }
 
-.logo {
+.header {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  width: 360px;
-  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoArea {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: 'Abel', 'Noto Sans KR', 'Pretendard';
 }
 
-.title {
-  width: 360px;
-  height: 190px;
-  margin-top: 30px;
+.logoImage {
   position: relative;
+  width: 48px;
+  height: 48px;
+  background: #A7ACEF;
+  border-radius: 50%;
+  box-shadow: 2px 2px 14px 0 rgba(0,0,0,25%);
+
+  img {
+    padding: 4px;
+    transform: rotate(-28deg);
+  }
+}
+
+.title {
+  width: 100%;
+  height: 190px;
+  margin-top: 48px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  img {
+    position: relative;
+  }
 }
 
 .listTitle {
-  width: 360px;
   margin-top: 30px;
   position: relative;
 }
 
-.worker {
-  font-size: x-large;
-  word-break: keep-all;
-}
-
 .footer {
+  margin-top: 36px;
   color: white;
 }
 
@@ -59,25 +76,32 @@
 }
 
 .purpleButton {
+  padding: 16px 24px;
   margin-top: 16px;
   background-color: #E38FDD;
-  width: 320px;
-  height: 64px;
   border: none;
   border-radius: 32px;
+  font-weight: bold;
+}
+
+.purpleButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
+}
+
+.bellImage {
+  position: relative;
+  width: 80px;
+  height: 87px;
 }
 
 .whiteButton {
+  padding: 12px 28px;
   background-color: rgba(255, 255, 255, 0.15);
   border: 2px solid white;
   border-radius: 40px;
-  width: 320px;
-  height: 80px;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 65px;
-  bottom: 0;
+  transform: translateY(68px);
 }
 
 .whiteButtonTitle {
@@ -88,8 +112,8 @@
 
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .buttons {
@@ -97,31 +121,7 @@
   margin-bottom: 10px;
 }
 
-.circle {
-  display: flex;
-  width: 64px;
-  height: 64px;
-  margin-left: 20px;
-  margin-right: auto;
-  margin-top: 16px;
-  border-radius: 32px;
-  gap: 0px;
-}
-
-.circleTitle {
-  margin: auto;
-  font-family: Abel;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 17px;
-  letter-spacing: -0.01em;
-  color: #FFFFFF;
-  text-align: center;
-}
-
 .year {
-  margin-left: auto;
-  margin-right: 20px;
   color: rgba(255, 255, 255, 0.2);
   font-family: Abel;
   font-size: 80px;
@@ -149,7 +149,6 @@
 }
 
 .speech {
-  width: 320px;
   background-color: #ffffff 15%;
   margin-bottom: 24px;
   padding-top: 24px;
@@ -161,15 +160,11 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
-
-  background: #FFFFFF26;
 }
 
 .worker {
-  background: #f7f7f7;
-  margin: 24px;
-  border-radius: 8px;
-  padding: 16px 10px 16px 10px;
+  width: 100%;
+  margin-top: 64px;
 }
 
 .contactText {
@@ -183,4 +178,82 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 21.79px;
+}
+
+#circle {
+  position: relative;
+  border-radius: 100%;
+  padding: 16px;
+  transform: translate(-36px, -36px);
+}
+
+#circle span {
+  position: absolute;
+  color: white;
+}
+
+
+@media (max-width: 1023px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .purpleButtons {
+    margin-top: 24px;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 24px;
+  }
+
+  .logoArea {
+    width: max-content;
+    display: flex;
+    justify-content: left;
+  }
+
+  .year {
+    margin-left: 42px;
+  }
+
+  .title {
+    width: max-content;
+    height: 300px;
+  }
+
+  .bellImage {
+    width: 150px;
+    height: 164px;
+  }
+
+  .stars {
+    img:nth-child(1) {
+      transform: translate(-80px, 100px);
+    }
+
+    img:nth-child(2) {
+      transform: translate(80px, 80px);
+    }
+  }
+
+  .whiteButton {
+    font-size: 60px;
+    white-space: nowrap;
+    border-radius: 120px;
+    transform: translateY(140px);
+    padding: 4px 32px;
+  }
+  
+  .textarea {
+    font-size: 28px;
+  }
+}
+
+em {
+  background-color: #2B5DE4;
+  font-style: normal;
 }

@@ -23,7 +23,7 @@ const Stats = () => {
 
     return (
         <p>
-            현재까지 {stats ? stats.responses : 0}개의 질문과<br />
+            현재까지 <em>{stats ? stats.responses : 0}개</em>의 질문과<br />
             함께하고 있습니다.
         </p>
     )
