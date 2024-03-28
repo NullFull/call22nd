@@ -106,7 +106,7 @@ export default function Home() {
 
         <div className="footer">
           <p className="contactText">Contact Us</p>
-          <p className="contactEmail">call22ndworks@gmail.com</p>
+          <p className="contactEmail">call22.works@gmail.com</p>
         </div>
 
       </main >
