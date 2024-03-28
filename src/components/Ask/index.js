@@ -197,7 +197,7 @@ const Ask = () => {
       </div>
 
       <div>
-        <button className="askButton" onClick={() => ask()}>질문 보내기</button>
+        <button className="askButton" onClick={() => debounce(() => ask(), 500)}>질문 보내기</button>
       </div>
     </div>
   )
