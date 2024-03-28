@@ -16,7 +16,7 @@ function CircularText() {
   
   const radius = 30;
   const diameter = radius * 2;
-  const characters = 'Call22'.split('');
+  const characters = 'Call 22'.split('');
   const deltaAngle = 120 / characters.length;
   const characterOffsetAngle = 0;
   let currentAngle = -90;
