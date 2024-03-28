@@ -103,7 +103,7 @@ const Ask = () => {
   const { candidates, status, fetchCandidates, actions } = useCandidates()
 
   const ask = async () => {
-    if (candidates.length < 1) {
+    if (candidates.filter(c => c.checked).length < 1) {
       alert('먼저 문의를 보낼 후보를 선택해주세요')
       return
     }
