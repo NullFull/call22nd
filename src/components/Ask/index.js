@@ -8,7 +8,9 @@ import FindByRegion from '@/components/Ask/FindByRegion'
 import FindByParty from '@/components/Ask/FindByParty'
 import Candidates from '@/components/Ask/Candidates'
 import CandidatesContext from '@/components/Ask/CandidatesContext'
+import Modal from '@/components/Ask/Modal'
 import client from '@/utils/client'
+import debounce from '@/utils/debounce'
 import './index.css'
 
 
@@ -102,6 +104,8 @@ const useCandidates = () => {
 const Ask = () => {
   const { candidates, status, fetchCandidates, actions } = useCandidates()
 
+  const [pending, setPending] = React.useState(false)
+
   const ask = async () => {
     if (candidates.filter(c => c.checked).length < 1) {
       alert('먼저 문의를 보낼 후보를 선택해주세요')
@@ -110,7 +114,9 @@ const Ask = () => {
 
     const content = '후보님의 생각이 궁금합니다.'
     try {
+      setPending(false)
       await client().sendRequest(content, candidates.filter(c => c.checked).map(c => c.id))
+      setPending(true)
       alert('질문이 등록 되었습니다.\n연락처가 존재하는 후보에게는 질문이 메일로 전달됩니다.')
     }
     catch (e)
@@ -197,8 +203,11 @@ const Ask = () => {
       </div>
 
       <div>
-        <button className="askButton" onClick={() => ask()}>질문 보내기</button>
+        <button className="askButton" onClick={() => debounce(ask(), 500)}>질문 보내기</button>
       </div>
+
+
+      { pending && <Modal/> }
     </div>
   )
 }
