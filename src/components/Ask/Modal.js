@@ -1,3 +1,5 @@
+import './Modal.css'
+
 const Modal = () => {
   return (
     <div className="modal">
@@ -8,3 +10,5 @@ const Modal = () => {
     </div>
   )
 }
+
+export default Modal
