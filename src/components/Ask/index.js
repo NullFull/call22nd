@@ -119,7 +119,6 @@ const Ask = () => {
 
     const content = '후보님의 생각이 궁금합니다.'
     try {
-      setPending(true)
       await client().sendRequest(content, candidates.filter(c => c.checked).map(c => c.id))
       alert('질문이 등록 되었습니다.\n연락처가 존재하는 후보에게는 질문이 메일로 전달됩니다.')
       setPending(false)
@@ -208,7 +207,13 @@ const Ask = () => {
       </div>
 
       <div>
-        <button className="askButton" onClick={() => debounce(ask(), 500)}>질문 보내기</button>
+        <button className="askButton" onClick={() => {
+          setPending(true)
+          debounce(ask(), 500)}
+          }
+        >
+          질문 보내기
+        </button>
       </div>
 
 
