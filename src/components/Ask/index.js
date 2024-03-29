@@ -104,9 +104,9 @@ const useCandidates = () => {
 const Ask = () => {
   const { candidates, status, fetchCandidates, actions } = useCandidates()
 
-  const [pending, setPending] = useState(false)
+  const [pending, setPending] = React.useState(false)
 
-  useEffect(() => {
+  React.useEffect(() => {
 
   }, [pending])
   
