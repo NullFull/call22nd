@@ -1,13 +1,14 @@
+'use client'
+
 import React from 'react'
 import client from '@/utils/client'
-import { useRouter } from 'next/router'
-import './answer.css'
-import './layout.css'
+import { useRouter } from 'next/navigation'
+import styles from "./answer.module.css";
 
 
 const LoadingSpinner = () => {
     return (
-        <div className="loader">
+        <div className={styles.loader}>
             <div />
         </div>
     )
@@ -44,15 +45,15 @@ const Answer = () => {
 
     return (
         <div style={{color: '#463E39', marginTop: '8px'}}>
-            <div className="logo">
+            <div className={styles.logo}>
                 <h3>
                     <span>제22대 국회의원 후보자에게 묻습니다</span>
                 </h3>
             </div>
             <hr />
-            <div className="container">
+            <div className={styles.container}>
                 {/* <h3>답변할 수 있는 시한이 지났습니다.</h3> */}
-                <h3>강간죄 구성요건을 &apos;동의&apos;여부로 바꾸는데 동의하십니까?</h3>
+                <h3>강간죄 구성 요건을 &apos;동의&apos; 여부로 바꾸는데 동의하십니까?</h3>
                 <div style={{margin: '6px 0', fontSize: '1.2rem'}}>
                     <label>
                         <input
@@ -77,7 +78,7 @@ const Answer = () => {
                 </div>
 
                 <div style={{marginTop: '20px'}}>
-                    <button className="submit" onClick={() => response()}>저장</button>
+                    <button className={styles.submit} onClick={() => response()}>저장</button>
                 </div>
                 {loading && <LoadingSpinner />}
             </div>
