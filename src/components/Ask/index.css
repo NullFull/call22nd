@@ -28,7 +28,7 @@
   font-size: 1.1rem;
   padding: 12px 16px 12px 16px;
   color: #fff;
-  background: #463e39;
+  background: #A55ECB;
 }
 .askButton:disabled {
   opacity: 0.5;
@@ -44,7 +44,8 @@
   }
 
   input {
-    caret-color: transparent;
+    caret-color: black;
+    color: black;
     background-color: white;
   }
 }
@@ -64,7 +65,7 @@
   }
 
   input::placeholder {
-    color: #BA44AE;
+    color: grey;
   }
 
   button {

@@ -64,26 +64,22 @@ const FindByRegion = ({onSelect}) => {
 
   return (
     <div className="wrapper">
-      <div>
-        <Select
-          placeholder="시, 도"
-          options={cities.map(city => ({value: city.name, label: city.name}))}
-          onChange={selected => {
-            setCity(selected)
-            setRegion(null)
-          }}
-        />
-      </div>
-      <div>
-        <Select
-          placeholder="선거구"
-          options={regions.map(region => ({value: region.name, label: region.name}))}
-          value={region}
-          onChange={selected => {
-            setRegion(selected)
-          }}
-        />
-      </div>
+      <Select
+        placeholder="시, 도"
+        options={cities.map(city => ({value: city.name, label: city.name}))}
+        onChange={selected => {
+          setCity(selected)
+          setRegion(null)
+        }}
+      />
+      <Select
+        placeholder="선거구"
+        options={regions.map(region => ({value: region.name, label: region.name}))}
+        value={region}
+        onChange={selected => {
+          setRegion(selected)
+        }}
+      />
     </div>
   )
 }
