@@ -106,28 +106,35 @@ const Ask = () => {
 
   const [pending, setPending] = React.useState(false)
 
+  const content = '후보님의 생각이 궁금합니다.'
+
   React.useEffect(() => {
+    const ask = async () => {
+      if (candidates.filter(c => c.checked).length < 1) {
+        alert('먼저 문의를 보낼 후보를 선택해주세요')
+        return
+      }
 
-  }, [pending])
-  
-
-  const ask = async () => {
-    if (candidates.filter(c => c.checked).length < 1) {
-      alert('먼저 문의를 보낼 후보를 선택해주세요')
-      return
+      try {
+        console.log('before await')
+        await client().sendRequest(content, candidates.filter(c => c.checked).map(c => c.id))
+        console.log('after await')
+        alert('질문이 등록 되었습니다.\n연락처가 존재하는 후보에게는 질문이 메일로 전달됩니다.')
+      }
+      catch(e)
+      {
+        alert('오류가 발생했습니다.')
+      }
     }
 
-    const content = '후보님의 생각이 궁금합니다.'
-    try {
-      await client().sendRequest(content, candidates.filter(c => c.checked).map(c => c.id))
-      alert('질문이 등록 되었습니다.\n연락처가 존재하는 후보에게는 질문이 메일로 전달됩니다.')
+    if(pending) {
+      debounce(ask())
       setPending(false)
     }
-    catch (e)
-    {
-      alert('오류가 발생했습니다.')
-    }
-  }
+  }, [pending, candidates])
+  
+
+  
 
   return (
     <div className="ask">
@@ -207,11 +214,7 @@ const Ask = () => {
       </div>
 
       <div>
-        <button className="askButton" onClick={() => {
-          setPending(true)
-          debounce(ask(), 500)}
-          }
-        >
+        <button className="askButton" onClick={() => { setPending(true)}} >
           질문 보내기
         </button>
       </div>
