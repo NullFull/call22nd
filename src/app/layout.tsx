@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: desc,
     images: [
       {
-        url: "https://call22nd.works/images/opengraph-image.png",
+        url: "https://call22nd.works/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "우리동네 국회의원들에게 강간죄 개정&여가부 유지할 건지 물어보러 가기",
