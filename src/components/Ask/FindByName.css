@@ -10,6 +10,8 @@
   flex-grow: 1;
   margin-right: 8px;
   padding: 8px;
+  color: #BA44AE;
+  caret-color: #BA44AE;
 }
 .wrapper button {
   color: #fff;

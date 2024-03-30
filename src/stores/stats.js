@@ -2,7 +2,7 @@ import getDB from '@/stores/_db'
 import firestore from '@google-cloud/firestore'
 
 
-export default {
+const statStore = {
     all: async () => {
         const query = await getDB()
             .collection('counter')
@@ -21,7 +21,8 @@ export default {
             .doc(`requests-counter/${candidateId}`)
             .get()
 
-        const { count } = query.data()
+        const queryData = query.data()
+        const count = queryData.count
         return {
             requests: count
         }
@@ -35,3 +36,5 @@ export default {
             })
     }
 }
+
+export default statStore
