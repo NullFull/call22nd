@@ -40,7 +40,7 @@
 .wrapperParty {
   div {
     border: none;
-    color: #BA44AE;
+    color: #BA44AE !important;
   }
 
   input {
@@ -53,7 +53,7 @@
 .wrapper {
   div {
     border: none;
-    color: #BA44AE;
+    color: #BA44AE !important;
   }
 
   input {
