@@ -103,6 +103,7 @@ const useCandidates = () => {
 
 const Ask = () => {
   const { candidates, status, fetchCandidates, actions } = useCandidates()
+  const hasSelectedCandidates = candidates.filter(c => c.checked).length > 0
 
   const [pending, setPending] = React.useState(false)
 
@@ -110,11 +111,6 @@ const Ask = () => {
 
   React.useEffect(() => {
     const ask = async () => {
-      if (candidates.filter(c => c.checked).length < 1) {
-        alert('먼저 문의를 보낼 후보를 선택해주세요')
-        return
-      }
-
       try {
         await client().sendRequest(content, candidates.filter(c => c.checked).map(c => c.id))
         alert('질문이 등록 되었습니다.\n연락처가 존재하는 후보에게는 질문이 메일로 전달됩니다.')
@@ -131,9 +127,6 @@ const Ask = () => {
     }
   }, [pending, candidates])
   
-
-  
-
   return (
     <div className="ask">
       {/* <ul className="notice">
@@ -211,13 +204,13 @@ const Ask = () => {
         </CandidatesContext.Provider>
       </div>
 
-      <div>
-        <button className="askButton" onClick={() => { setPending(true) }} >
-          질문 보내기
-        </button>
-      </div>
-
-
+      {hasSelectedCandidates && (
+        <div>
+          <button className="askButton" onClick={() => setPending(true)} >
+            질문 보내기
+          </button>
+        </div>
+      )}
       { pending && <Modal /> }
     </div>
   )
