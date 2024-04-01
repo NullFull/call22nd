@@ -78,7 +78,7 @@ export default function Home() {
         <div className="message textarea">
           <p>
             강간죄 개정연대<br />
-            #22nd
+            #call22nd
           </p>
           <MiniStar />
           <p>
