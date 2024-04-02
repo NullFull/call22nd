@@ -1,16 +1,16 @@
 'use client'
 
 import React from 'react'
+import { Suspense } from "react";
 import client from '@/utils/client'
 import { useSearchParams } from "next/navigation";
 import styles from "./answer.module.css";
-import { Suspense } from "react";
 
 
 const LoadingSpinner = () => {
     return (
         <div className={styles.loader}>
-            <div />
+          <div />
         </div>
     )
 }
@@ -88,4 +88,12 @@ const Answer = () => {
     )
 }
 
-export default Answer;
+const AnswerPage = () => {
+  return (
+    <Suspense>
+      <Answer/>
+    </Suspense>
+  )
+}
+
+export default AnswerPage;
