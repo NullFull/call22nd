@@ -38,7 +38,7 @@
 }
 
 .wrapperParty {
-  div {
+  div, div[class*="menu"] {
     border: none;
     color: #BA44AE !important;
   }
@@ -51,7 +51,7 @@
 }
 
 .wrapper {
-  div {
+  div, div[class*="menu"] {
     border: none;
     color: #BA44AE !important;
   }
