@@ -7,6 +7,7 @@ let config = {
     },
     webpack5: false,
     reactStrictMode: false,
+    missingSuspenseWithCSRBailout: false,
 }
 
 module.exports = config
