@@ -44,7 +44,6 @@ const Answer = () => {
     }
 
     return (
-        <Suspense>
             <div style={{color: '#463E39', marginTop: '8px'}}>
                 <div className={styles.logo}>
                     <h3>
@@ -84,7 +83,6 @@ const Answer = () => {
                     {loading && <LoadingSpinner />}
                 </div>
             </div>
-        </Suspense>
     )
 }
 
