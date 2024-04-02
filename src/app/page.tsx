@@ -27,7 +27,7 @@ export default function Home() {
               download
             />
             <PurpleButton
-              link={"#askSection"}
+              link={"https://wonderful-law.korea.wtf/result?opened=true"}
               message={"강간죄 개정 촉구하러 가기"}
             />
           </div>
