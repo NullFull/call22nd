@@ -2,7 +2,7 @@
 
 import React from 'react'
 import client from '@/utils/client'
-import { useRouter } from 'next/navigation'
+import { useSearchParams } from "next/navigation";
 import styles from "./answer.module.css";
 
 
@@ -16,8 +16,7 @@ const LoadingSpinner = () => {
 
 
 const Answer = () => {
-    const router = useRouter()
-    const query = router.query
+    const token = useSearchParams().get('token')
     const [choice, setChoice] = React.useState(null)
     const [loading, setLoading] = React.useState(false)
 
@@ -30,7 +29,7 @@ const Answer = () => {
         try {
             setLoading(true)
             const test = await client().post(`/api/responses`, {
-                token: query.token,
+                token: token,
                 choice
             })
             if (test.message)
