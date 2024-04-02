@@ -7,8 +7,7 @@ import MiniStar from "@/components/MiniStar";
 import Ask from "@/components/Ask";
 import Stats from "@/components/Stats";
 import Logo from "@/components/Logo";
-// import Result from "@/components/Result";
-
+import Result from "@/components/Result";
 
 
 export default function Home() {
@@ -96,9 +95,9 @@ export default function Home() {
           </p>
         </div >
 
-        {/* <div className="result">
+        <div className="result">
           <Result />
-        </div> */}
+        </div>
 
         <div className="worker" id="askSection">
           <Ask />
