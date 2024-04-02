@@ -17,7 +17,7 @@ const FindByName = ({onSubmit}) => {
 
   return (
     <div className="wrapper">
-      <input placeholder="이름으로 검색" value={q} onChange={e => setQ(e.target.value)} onKeyDown={handleKeyPress} />
+      <input className="name-search" placeholder="이름으로 검색" value={q} onChange={e => setQ(e.target.value)} onKeyDown={handleKeyPress} />
       <button disabled={q.length < 1} onClick={e => onSubmit && onSubmit(q)}>검색</button>
     </div>
   )

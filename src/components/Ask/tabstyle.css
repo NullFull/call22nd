@@ -71,5 +71,7 @@
 }
 .react-tabs__tab-panel--selected {
   display: block;
+  color: var(--font-color);
+  border: none
 }
 
