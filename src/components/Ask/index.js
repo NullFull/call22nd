@@ -89,12 +89,6 @@ export const useCandidates = () => {
       const response = await fetch(`/parties/${party.value}/candidates.json`)
       const data = await response.json()
       actions.SET(data)
-    },
-    byId: async id => {
-      actions.FETCH()
-      const response = await fetch(`/candidates/${id}.json`)
-      const data = await response.json()
-      return data
     }
   }
 

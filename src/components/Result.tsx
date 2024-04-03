@@ -16,23 +16,20 @@ const Response = ({member}: any) => (
 )
 
 const Result = () => {
-    const { fetchCandidates } = useCandidates()
     const [agrees, setAgrees] = React.useState<any[]>([])
-    const [disagrees, setDisagrees] = React.useState<any[]>([])
+    // const [disagrees, setDisagrees] = React.useState<any[]>([])
 
     const fetchResponses = async () => {
         const { data: responses } = await client().get(`/api/responses`)
-        // const { agreed, disagreed } = responses
-        const agreedCandidates = await getCandidate(responses.agreed)
-        // const disagreedCandidates = await getCandidate(disagreed)
-
+        const agreedCandidates = await joinPersonalInfo(responses.agreed)
+        // const disagreedCandidates = await joinPersonalInfo(responses.disagreed)
         setAgrees(agreedCandidates)
         // setDisagrees(disagreedCandidates)
     }
 
-    async function getCandidate(candidates: any) {
+    async function joinPersonalInfo(candidates: any) {
         return Promise.all(candidates.map(async (candidate: any) => {
-            const candidateInfo = await fetchCandidates.byId(candidate.id)
+            const candidateInfo = await fetch(`/candidates/${candidate.id}.json`).then((res) => res.json())
             const { choice, id } = candidate
             return { candidate: candidateInfo, choice, id }
         }))
@@ -57,7 +54,7 @@ const Result = () => {
 
             {agrees.length > 0 &&
                 <div>
-                    <h3 className="listTitle">동의한 후보 목록</h3>
+                    <h3 className="listTitle">동의한 후보 {agrees.length}명</h3>
                     <ul className="list">
                         {agrees.map(response => (
                             <li key={`agree-${response.id}`} style={{padding: '10px 0'}}>
