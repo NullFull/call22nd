@@ -32,7 +32,7 @@ export default function StatsByCandidate() {
     return (
         <div className={styles.statsContainer}>
             <section>
-              <h3>가장 질문이 많은 후보</h3>
+              <h3>가장 많은 질문을 받은 후보</h3>
               {loading && <p>Loading...</p>}
               {hasData && <p>{candidateWithMaxRequest.name}({candidateWithMaxRequest.party}) : {candidateWithMaxRequest.requests}</p>}
             </section>
