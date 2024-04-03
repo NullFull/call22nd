@@ -57,7 +57,7 @@ const Result = () => {
 
             {agrees.length > 0 &&
                 <div>
-                    <h3 className="listTitle">전체 찬성한 후보 목록</h3>
+                    <h3 className="listTitle">동의한 후보 목록</h3>
                     <ul className="list">
                         {agrees.map(response => (
                             <li key={`agree-${response.id}`} style={{padding: '10px 0'}}>
