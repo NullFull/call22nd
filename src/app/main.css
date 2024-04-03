@@ -58,8 +58,9 @@
 }
 
 .listTitle {
-  margin-top: 30px;
+  margin-top: 70px;
   position: relative;
+  color: white;
 }
 
 .footer {
@@ -164,7 +165,7 @@
 
 .worker {
   width: 100%;
-  margin-top: 64px;
+  margin-top: 70px;
 }
 
 .contactText {
@@ -256,4 +257,8 @@
 em {
   background-color: #2B5DE4;
   font-style: normal;
+}
+
+.result {
+  max-width: 50rem;
 }
