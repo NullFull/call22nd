@@ -20,8 +20,10 @@ export default function StatsByCity() {
         }))
         
         const sum = requests.reduce((acc, counter) => acc + counter, 0)
-        return await acc + sum
-      }, 0)
+        const length = candidatesByRegions.length
+        const {requests: accRequests, candidates: accCandidates} = await acc
+        return await { requests: accRequests + sum, candidates: accCandidates + length }
+      }, ({requests: 0, candidates: 0}))
       return candidatesRequests
     }
 
@@ -31,7 +33,7 @@ export default function StatsByCity() {
       const cities = await response.json()
       const citiesRequests = await Promise.all(cities.map(async ({name}) => {
         const requests = await fetchCandidatesRequestsByCity(name)
-        return { city: name, requests }
+        return { city: name, ...requests}
       }))
       setRequestsByCities(citiesRequests)
       setLoading(false)
@@ -42,33 +44,54 @@ export default function StatsByCity() {
     }, [])
 
     const hasData = !loading && requestsByCities.length > 0
-    const cityWithMaxRequest = requestsByCities.reduce((acc, {city, requests}) => {
-      return requests > acc.requests ? { city, requests } : acc
-    }, { city: '', requests: 0 })
-    const cityWithMinRequest = requestsByCities.reduce((acc, {city, requests}) => {
-      return requests < acc.requests ?{ city, requests } : acc
-    }, { city: '', requests: Number.MAX_SAFE_INTEGER })
+    const cityWithMaxRequest = requestsByCities.reduce((acc, cur) => {
+      return cur.requests > acc.requests ? cur : acc
+    }, { city: '', requests: Number.MIN_SAFE_INTEGER, candidates: 0 })
+    const cityWithMinRequest = requestsByCities.reduce((acc, cur) => {
+      return cur.requests < acc.requests ? cur : acc
+    }, { city: '', requests: Number.MAX_SAFE_INTEGER, candidates: 0 })
+
+    const cityWithMaxAverage = requestsByCities.reduce((acc, cur) => {
+      return (cur.requests / cur.candidates) > (acc.requests / acc.candidates) ? cur : acc
+    }, { city: '', requests: Number.MIN_SAFE_INTEGER, candidates: 0 })
+    const cityWithMinAverage = requestsByCities.reduce((acc, cur) => {
+      return (cur.requests / cur.candidates) < (acc.requests / acc.candidates) ? cur : acc
+    }, { city: '', requests: Number.MAX_SAFE_INTEGER, candidates: 0 })
+
+    function getAverage(requests, candidates) {
+      return (requests / candidates).toFixed()
+    }
   
     return (
         <div className={styles.statsContainer}>
             <section>
               <h3>지역별 질문 수</h3>
               {loading && <p>Loading...</p>}
-              {hasData && requestsByCities.map(({city, requests}) => (
+              {hasData && requestsByCities.map(({city, requests, candidates}) => (
                 <div key={city}>
-                  <p>{city} : {requests}</p>
+                  <p>{city} : {requests} / {candidates} =&gt; 후보 한 명당 평균 {getAverage(requests, candidates)}개 </p>
                 </div>
               ))}
             </section>
             <section>
-              <h3>가장 질문이 많은 지역</h3>
+              <h3>가장 많은 질문을 받은 지역</h3>
               {loading && <p>Loading...</p>}
               {hasData && <p>{cityWithMaxRequest.city} : {cityWithMaxRequest.requests}</p>}
             </section>
             <section>
-              <h3>가장 질문이 적은 지역</h3>
+              <h3>가장 적은 질문을 받은 지역</h3>
               {loading && <p>Loading...</p>}
               {hasData && <p>{cityWithMinRequest.city} : {cityWithMinRequest.requests}</p>}
+            </section>
+            <section>
+              <h3>후보 한 명당 가장 많은 질문을 받은 지역</h3>
+              {loading && <p>Loading...</p>}
+              {hasData && <p>{cityWithMaxAverage.city} : {getAverage(cityWithMaxAverage.requests, cityWithMaxAverage.candidates)}</p>}
+            </section>
+            <section>
+              <h3>후보 한 명당 가장 적은 질문을 받은 지역</h3>
+              {loading && <p>Loading...</p>}
+              {hasData && <p>{cityWithMinAverage.city} : {getAverage(cityWithMinAverage.requests, cityWithMinAverage.candidates)}</p>}
             </section>
         </div>
     )
