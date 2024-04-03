@@ -60,7 +60,7 @@ const reducer = (state, action) => {
 }
 
 
-const useCandidates = () => {
+export const useCandidates = () => {
   const [state, dispatch] = React.useReducer(reducer, initial)
 
   const actions = {
@@ -89,6 +89,12 @@ const useCandidates = () => {
       const response = await fetch(`/parties/${party.value}/candidates.json`)
       const data = await response.json()
       actions.SET(data)
+    },
+    byId: async id => {
+      actions.FETCH()
+      const response = await fetch(`/candidates/${id}.json`)
+      const data = await response.json()
+      return data
     }
   }
 

@@ -3,6 +3,7 @@
 import React from 'react';
 import client from '@/utils/client'
 import './result.css'
+import { useCandidates } from './Ask';
 
 const Response = ({member}: any) => (
     <div className="member">
@@ -13,16 +14,29 @@ const Response = ({member}: any) => (
 )
 
 const Result = () => {
+    const { fetchCandidates } = useCandidates()
     const [agrees, setAgrees] = React.useState<any[]>([])
     const [disagrees, setDisagrees] = React.useState<any[]>([])
 
-    React.useEffect(() => {
-        const fetchResponses = async () => {
-            const { data } = await client().get(`/api/responses`)
+    const fetchResponses = async () => {
+        const { data: responses } = await client().get(`/api/responses`)
+        const { agreed, disagreed } = responses
+        const agreedCandidates = await getCandidate(agreed)
+        const disagreedCandidates = await getCandidate(disagreed)
 
-            setAgrees(data.agreed)
-            setDisagrees(data.disagreed)
-        }
+        setAgrees(agreedCandidates)
+        setDisagrees(disagreedCandidates)
+    }
+
+    async function getCandidate(candidates: any) {
+        return Promise.all(candidates.map(async (candidate: any) => {
+            const candidateInfo = await fetchCandidates.byId(candidate.id)
+            const { choice, id } = candidate
+            return { candidate: candidateInfo, choice, id }
+        }))
+    }
+
+    React.useEffect(() => {
         fetchResponses()
     }, [])
 
