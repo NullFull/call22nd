@@ -1,9 +1,9 @@
 "use client"
 
-import * as styles from './stats.module.css'
+import * as styles from '../stats.module.css'
 import { useEffect, useState } from "react"
 
-export default function StatsByRegion() {
+export default function StatsByCity() {
     const [loading, setLoading] = useState(false)
     const [requestsByCities, setRequestsByCities] = useState([])
 
