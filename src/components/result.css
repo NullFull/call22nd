@@ -11,21 +11,47 @@
 .member {
   position: relative;
   text-align: center;
-  width: 100px;
+  width: 140px;
   height: auto;
-  margin-right: 4px;
+  margin-right: 8px;
 }
-.member h3 {
-  background: #ffc700;
+.member .affiliation {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+.member .name {
+  --radius: 100px;
+  width: var(--radius);
+  height: var(--radius);
+  padding-top: 12px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: linear-gradient(120deg, #466de7, #e490dd);
+  font-weight: 600;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 .member p {
+  font-size: 12px;
+  background: white;
+  padding: 6px;
   margin: auto 0;
+  border-radius: 8px;
+  border: 2px solid #5b5b5e;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.member .party {
+  border-bottom: 2px dashed #5b5b5e;
+  font-weight: 700;
 }
 .member .region {
-  opacity: 0.6;
-  padding-bottom: 4px;
-  font-size: 0.75rem;
+  border-top: none;
 }
+
 /*
   h3
     position relative
