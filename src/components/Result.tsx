@@ -17,14 +17,14 @@ const Response = ({member}: any) => (
 
 const Result = () => {
     const [agrees, setAgrees] = React.useState<any[]>([])
-    // const [disagrees, setDisagrees] = React.useState<any[]>([])
+    const [disagrees, setDisagrees] = React.useState<any[]>([])
 
     const fetchResponses = async () => {
         const { data: responses } = await client().get(`/api/responses`)
         const agreedCandidates = await joinPersonalInfo(responses.agreed)
-        // const disagreedCandidates = await joinPersonalInfo(responses.disagreed)
+        const disagreedCandidates = await joinPersonalInfo(responses.disagreed)
         setAgrees(agreedCandidates)
-        // setDisagrees(disagreedCandidates)
+        setDisagrees(disagreedCandidates)
     }
 
     async function joinPersonalInfo(candidates: any) {
@@ -65,9 +65,9 @@ const Result = () => {
                 </div>
             }
 
-            {/* {disagrees.length > 0 &&
+            {disagrees.length > 0 &&
                 <div>
-                    <h3 className="listTitle">반대한 후보 목록</h3>
+                    <h3 className="listTitle">반대한 후보 {disagrees.length}명</h3>
                     <ul className="list">
                         {disagrees.map(response => (
                             <li key={`disagree-${response.id}`} style={{padding: '5px 0'}}>
@@ -76,7 +76,7 @@ const Result = () => {
                         ))}
                     </ul>
                 </div>
-            } */}
+            }
         </div>
     )
 }
