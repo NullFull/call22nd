@@ -3,14 +3,13 @@
 import React from 'react';
 import client from '@/utils/client'
 import './result.css'
-import { useCandidates } from './Ask';
 
 const Response = ({member}: any) => (
     <div className="member">
         <h3 className="name">{member.name}</h3>
         <div className="affiliation">
             <p className="party">{member.party}</p>
-            <p className="region">{member.region === '비례' ? '비례대표' : member.region.name}</p>
+            <p className="region">{member.city ? `${member.city.name} ${member.region.name}` : '비례대표'}</p>
         </div>
     </div>
 )
