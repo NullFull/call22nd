@@ -52,8 +52,8 @@ const Answer = () => {
                 </div>
                 <hr />
                 <div className={styles.container}>
-                    {/* <h3>답변할 수 있는 시한이 지났습니다.</h3> */}
-                    <h3>강간죄 구성 요건을 &apos;동의&apos; 여부로 바꾸는데 동의하십니까?</h3>
+                    <h3>답변할 수 있는 시한이 지났습니다.</h3>
+                    {/* <h3>강간죄 구성 요건을 &apos;동의&apos; 여부로 바꾸는데 동의하십니까?</h3>
                     <div style={{margin: '6px 0', fontSize: '1.2rem'}}>
                         <label>
                             <input
@@ -79,7 +79,7 @@ const Answer = () => {
 
                     <div style={{marginTop: '20px'}}>
                         <button className={styles.submit} onClick={() => response()}>저장</button>
-                    </div>
+                    </div> */}
                     {loading && <LoadingSpinner />}
                 </div>
             </div>

@@ -9,10 +9,32 @@ import Stats from "@/components/Stats";
 import Logo from "@/components/Logo";
 import Result from "@/components/Result";
 
+function TopNotice() {
+  return (
+    <div className="notice">
+      <div className="marquee-wrapper">
+        <div className="marquee">
+          <NoMoreContent />
+          <NoMoreContent />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function NoMoreContent() {
+  return (
+    <div className="notice-content-wrapper">
+      답변 가능 기간이 지나 더 이상 질문 메일 전송을 지원하지 않습니다.
+    </div>
+  )
+}
+
 
 export default function Home() {
   return (
     <div className="mainWrapper">
+      <TopNotice />
       <main className="main">
         <div className="header">
           <div className="logoArea">
@@ -99,9 +121,9 @@ export default function Home() {
           <Result />
         </div>
 
-        <div className="worker" id="askSection">
+        {/* <div className="worker" id="askSection">
           <Ask />
-        </div>
+        </div> */}
 
         <div className="footer">
           <p className="contactText">Contact Us</p>

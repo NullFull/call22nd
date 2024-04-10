@@ -2,8 +2,81 @@
 @import url(https://fonts.googleapis.com/css2?family=Abel);
 
 .mainWrapper {
+  --top-padding: 48px;
+  padding-top: var(--top-padding);
+  position: relative;
   margin: 0 auto;
   background: linear-gradient(#1C63E9, 20%, #E690DD, 80%, #1C63E9);
+  overflow: hidden;
+}
+
+
+.notice {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--top-padding);
+  background-color: red;
+  color: white;
+  font-family: 'Noto Sans KR';
+  z-index: 10;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.marquee-wrapper {
+  --content-width: 475px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: var(--content-width);
+  height: 100%;
+}
+
+.marquee {
+  position: absolute;
+  width: 200%;
+  animation: marquee 10s linear infinite 2s;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.notice-content-wrapper {
+  display: flex;
+  float: left;
+  width: 50%;
+  padding-left: 20px;
+}
+
+@media (min-width: 500px) {
+  .notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .marquee-wrapper {
+    --content-width: 445px;
+  }
+
+  .marquee {
+    position: fixed;
+    animation: none;
+    overflow: hidden;
+  }
+
+  .notice-content-wrapper {
+    width: 50%;
+    padding-left: 0;
+  }
 }
 
 .main {
