@@ -16,7 +16,7 @@
   top: 0;
   width: 100%;
   height: var(--top-padding);
-  background-color: red;
+  background-color: #fb43ff;
   color: white;
   font-family: 'Noto Sans KR';
   z-index: 10;
