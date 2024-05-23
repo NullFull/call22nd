@@ -54,18 +54,18 @@ const Result = () => {
                     </ul>
                 </div>
             }
-
-            <div>
-                <h3 className="listTitle">찬성한 후보 중 당선된 후보 {electedAgrees.length}명</h3>
-                <ul className="list">
-                    {electedAgrees.map(response => (
-                        <li key={`elected-${response.id}`} style={{padding: '5px 0'}}>
-                            <Response member={response.candidate}/>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
+            {electedAgrees.length > 0 && 
+                <div>
+                    <h3 className="listTitle">찬성한 후보 중 당선된 후보 {electedAgrees.length}명</h3>
+                    <ul className="list">
+                        {electedAgrees.map(response => (
+                            <li key={`elected-${response.id}`} style={{padding: '5px 0'}}>
+                                <Response member={response.candidate}/>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            }
             {disagrees.length > 0 &&
                 <div>
                     <h3 className="listTitle">반대한 후보 {disagrees.length}명</h3>
