@@ -28,13 +28,14 @@ const Result = () => {
 
     async function joinPersonalInfo(candidates: any) {
         return Promise.all(candidates.map(async (candidate: any) => {
-            const { data: candidateInfo } = await client().get(`/api/candidates/${candidate.id}`)
+            const candidateInfo = await fetch(`/candidates/${candidate.id}.json`).then((res) => res.json())
+            const { data: { elected } } = await client().get(`/api/candidates/${candidate.id}`)
             const { choice, id } = candidate
-            return { candidate: candidateInfo, choice, id }
+            return { candidate: candidateInfo, choice, id, elected }
         }))
     }
 
-    const electedAgrees = agrees.filter(e => e.candidate.elected)
+    const electedAgrees = agrees.filter(e => e.elected)
 
     React.useEffect(() => {
         fetchResponses()
